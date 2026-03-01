@@ -41,25 +41,19 @@ Unlike traditional Geiger-Müller tube based designs requiring high-voltage modu
 
 The sensor is integrated using ESPHome over I²C.
 
-### Challenge: Sensor Initialization Timing
+## Engineering Challenge: Slow I²C Initialization (GDK101 rev:A)
 
-The rev:A variant of the GDK101 requires extended initialization time after power-up.
+The GDK101 **rev:A** requires an extended startup time after power-up before stable I²C communication is possible.  
+Default ESPHome initialization accessed the device too early, causing I²C timeouts and aborted initialization.
 
-Default ESPHome initialization timing resulted in:
+**Fix:** A custom ESPHome `external_components` integration was implemented with:
 
-- I²C communication timeouts
-- Sensor initialization failures
-- Aborted startup sequences
+- explicit initialization state (`initialized_`)
+- background retries every 2 seconds
+- bounded retry window (45 attempts ≈ 90 seconds)
+- no permanent component failure during boot
 
-### Solution
-
-The ESPHome integration was modified to:
-
-- Introduce extended initialization delay
-- Adjust I²C startup handling
-- Improve error tolerance during boot
-
-This ensured stable sensor availability after each restart.
+See: `docs/esphome-integration-modification.md`
 
 ---
 
