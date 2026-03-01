@@ -17,18 +17,16 @@ esp32:
   framework:
     type: arduino
 
-# Enable logging
 logger:
   level: DEBUG
 
-# Enable Home Assistant API
 api:
   encryption:
-    key: "/LjyNcObMHP9YuqwgbQsUBGtRSD2p7xlgTR6JhpMBcc="
+    key: !secret api_key
 
 ota:
   platform: esphome
-  password: "16f35ec99f28a1d3ddf46e1093918bd2"
+  password: !secret ota_password
 
 wifi:
   use_address: radiation.geier.solutions
@@ -36,10 +34,9 @@ wifi:
   password: !secret wifi_password
   min_auth_mode: WPA2
 
-  # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Radiation Fallback Hotspot"
-    password: "Yo8jC0ocHn4y"
+    ssid: !secret wifi_ap_ssid
+    password: !secret wifi_ap_password
 
 i2c:
   sda: GPIO8
@@ -47,7 +44,6 @@ i2c:
   scan: true
   frequency: 50kHz
 
-# Hub/Komponente (hier gehören address + update_interval hin)
 gdk101:
   address: 0x18
   update_interval: 60s
