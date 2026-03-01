@@ -35,6 +35,9 @@ Unlike traditional Geiger-Müller tube based designs requiring high-voltage modu
 - Noise isolation and signal integrity on I²C bus
 - Compact and robust PCB layout
 
+![Hardware Overview](images/hardware/hardware-02.jpg)
+*Hardware prototype on perfboard*
+
 ---
 
 ## Firmware Architecture (ESPHome)
