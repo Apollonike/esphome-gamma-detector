@@ -54,6 +54,9 @@ Several electrical and integration aspects had to be considered:
 - reliable I²C communication
 - compact PCB layout suitable for enclosure integration
 
+![Hardware Overview](images/hardware/hardware-02.jpg)
+*Hardware prototype on perfboard*
+
 ---
 
 # System Overview
