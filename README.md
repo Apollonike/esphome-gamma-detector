@@ -53,9 +53,9 @@ Several electrical and integration aspects had to be considered:
 - stable 5V power supply for the sensor
 - reliable I²C communication
 - compact PCB layout suitable for enclosure integration
-
 ![Hardware Overview](images/hardware/hardware-02.jpg)
 *Hardware prototype on perfboard*
+[Hardware Design](docs/hardware-design.md)
 
 ---
 
@@ -99,7 +99,7 @@ Key mechanisms:
 
 Further technical details are documented in:
 
-`docs/esphome-integration-modification.md`
+[ESPHome Integration Modifications](docs/esphome-integration-modification.md)
 
 ---
 
