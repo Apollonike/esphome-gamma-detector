@@ -53,8 +53,19 @@ Several electrical and integration aspects had to be considered:
 - stable 5V power supply for the sensor
 - reliable I²C communication
 - compact PCB layout suitable for enclosure integration
-![Hardware Overview](images/hardware/hardware-02.jpg)
+
+- [<img src="images/hardware/hardware-02.jpg" width="400">](images/hardware/hardware-02.jpg)
+
 *Hardware prototype on perfboard*
+
+[<img src="images/hardware/hardware-01.jpg" width="150">](images/hardware/hardware-01.jpg)
+[<img src="images/hardware/hardware-03.jpg" width="150">](images/hardware/hardware-03.jpg)
+[<img src="images/hardware/hardware-04.jpg" width="150">](images/hardware/hardware-03.jpg)
+[<img src="images/hardware/hardware-05.jpg" width="150">](images/hardware/hardware-03.jpg)
+
+[<img src="images\pcb\pcb-01.JPG" width="150">](images\pcb\pcb-01.JPG)
+[<img src="images\pcb\pcb-03.JPG" width="150">](images\pcb\pcb-03.JPG)
+
 [Hardware Design](docs/hardware-design.md)
 
 ---
@@ -75,6 +86,9 @@ D --> E[Radiation Monitoring Dashboard]
 # Firmware Architecture (ESPHome)
 
 The radiation sensor is integrated using **ESPHome over I²C**.
+
+[<img src="images\pcb\pcb-02.JPG" width="150">](images\pcb\pcb-02.JPG)
+
 
 ## Engineering Challenge: Slow I²C Initialization (GDK101 rev:A)
 
@@ -113,6 +127,10 @@ Provided functionality:
 - real-time monitoring
 - long-term statistics using Home Assistant recorder
 - dashboard visualization
+
+[<img src="images\home-assistant\dashboard-02.jpg" width="300">](images\home-assistant\dashboard-02.jpg)
+[<img src="images\home-assistant\dashboard-03.jpg" width="300">](images\home-assistant\dashboard-03.jpg)
+
 
 ---
 
